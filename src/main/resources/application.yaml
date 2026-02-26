@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ArenaSR
+#Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/arena_sr
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+#Jpa
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    show-sql: true
+#Web
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+server:
+  port: 8080
