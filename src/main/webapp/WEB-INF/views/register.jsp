@@ -17,10 +17,11 @@
 <p>Создай своего персонажа</p>
 
 <form action="/register" method="post">
-    <input type="text" name="username" placeholder="Придумай логин" required><br>
-    <input type="password" name="password" placeholder="Придумай пароль" required><br>
+    <input type="text" name="username" placeholder="Придумай логин" value="${requestScope.user.username}" required><br>
+    <input type="password" name="password" placeholder="Придумай пароль" value="${requestScope.user.password}" required><br>
     <button type="submit">Войти в игру</button>
 </form>
+<h2 style="color: #c0392b">${errorMessage}</h2>
 
 <br><br>
 <a href="/">На главную</a>
