@@ -1,13 +1,13 @@
 package com.example.arenasr.mapper;
 
-import com.example.arenasr.dto.UserLoginDto;
+import com.example.arenasr.dto.UserRegisterDto;
 import com.example.arenasr.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserLoginDtoMapper implements Mapper<UserLoginDto, User> {
+public class UserRegisterDtoMapper implements Mapper<UserRegisterDto, User> {
     @Override
-    public User map(UserLoginDto dto) {
+    public User map(UserRegisterDto dto) {
         return  User.builder()
                 .username(dto.getUsername())
                 .password(dto.getPassword())
@@ -15,7 +15,7 @@ public class UserLoginDtoMapper implements Mapper<UserLoginDto, User> {
     }
 
     @Override
-    public UserLoginDto unmap(User user) {
+    public UserRegisterDto unmap(User user) {
         return null;
     }
 }

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-    <title>Регистрация - Арена Героев</title>
+    <title>Вход - Арена Героев</title>
     <style>
         body { font-family: sans-serif; background-color: #2c3e50; color: white; text-align: center; padding: 50px; }
         form { background: #34495e; padding: 20px; display: inline-block; border-radius: 8px; }
@@ -14,12 +14,12 @@
 </head>
 <body>
 <h1>⚔️ Арена Героев ⚔️</h1>
-<p>Создай своего персонажа</p>
+<p>Ввойти в своего персонажа</p>
 
-<form action="/register" method="post">
-    <input type="text" name="username" placeholder="Придумай логин" value="${requestScope.user.username}" required><br>
-    <input type="password" name="password" placeholder="Придумай пароль" value="${requestScope.user.password}" required><br>
-    <button type="submit">Создать персонажа</button>
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="Логин" value="${requestScope.user.username}" required><br>
+    <input type="password" name="password" placeholder="Пароль" value="${requestScope.user.password}" required><br>
+    <button type="submit">Войти в игру</button>
 </form>
 <h2 style="color: #c0392b">${requestScope.errorMessage}</h2>
 

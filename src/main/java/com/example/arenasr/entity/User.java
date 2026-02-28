@@ -22,4 +22,8 @@ public class User {
     private String password;
 
     private Double gold;
+
+    private int wins;
+
+    private int losses;
 }
